@@ -1,10 +1,10 @@
 #!/bin/sh
 # Package the Falcond Status Checker widget, with its compiled translations, as a .plasmoid file ready to share or
-# upload to the KDE Store. The package is assembled in build/falcond/ first, so the compiled translations
+# upload to the KDE Store. The package is assembled in build/falcond-status/ first, so the compiled translations
 # stay out of the source tree. install.sh installs the .plasmoid file.
 #
 # Usage:
-#   ./build.sh   write build/falcond/ and build/falcond.plasmoid
+#   ./build.sh   write build/falcond-status/ and build/falcond-status.plasmoid
 #
 # Needs zip, and msgfmt from gettext.
 
@@ -34,8 +34,8 @@ log "Reading metadata.json..."
 PLUGIN_ID=$(sed -n 's/.*"Id": *"\([^"]*\)".*/\1/p' metadata.json)
 [ -n "$PLUGIN_ID" ] || fail "no \"Id\" found in metadata.json"
 log "  id: $PLUGIN_ID"
-PACKAGE_DIR="build/falcond"
-OUTPUT="build/falcond.plasmoid"
+PACKAGE_DIR="build/falcond-status"
+OUTPUT="build/falcond-status.plasmoid"
 
 log "Building $PLUGIN_ID..."
 log "  cleaning $PACKAGE_DIR and $OUTPUT"
@@ -49,7 +49,7 @@ log "  compiling translations"
 translate/compile.sh "$PACKAGE_DIR"
 
 log "  packing $OUTPUT"
-(cd "$PACKAGE_DIR" && zip -qr ../falcond.plasmoid metadata.json contents LICENSE)
+(cd "$PACKAGE_DIR" && zip -qr ../falcond-status.plasmoid metadata.json contents LICENSE)
 log "  packed $OUTPUT ($(du -h "$OUTPUT" | cut -f1))"
 
 log "Output: $OUTPUT"

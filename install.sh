@@ -33,7 +33,7 @@ log "Reading metadata.json..."
 PLUGIN_ID=$(sed -n 's/.*"Id": *"\([^"]*\)".*/\1/p' metadata.json)
 [ -n "$PLUGIN_ID" ] || fail "no \"Id\" found in metadata.json"
 log "  id: $PLUGIN_ID"
-PACKAGE="build/falcond.plasmoid"
+PACKAGE="build/falcond-status.plasmoid"
 
 if [ "$ACTION" = remove ]; then
     log "Removing $PLUGIN_ID..."
