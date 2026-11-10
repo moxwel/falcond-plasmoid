@@ -14,6 +14,14 @@ It polls `systemctl is-active falcond` and the `ACTIVE_PROFILE` line of falcond'
 
 ## Install
 
+### GitHub Releases
+
+Download the [latest release](https://github.com/moxwel/falcond-plasmoid/releases/latest/download/falcond-status.plasmoid).
+
+Install `falcond-status.plasmoid` from *Add or Manage Widgets...* > *Get New* > *Install Widget From Local File...*.
+
+Restart plasmashell or log out and back in if it does not appear immediately.
+
 ### Manual
 
 ```sh
