@@ -10,6 +10,10 @@ import org.kde.kquickcontrols as KQuickControls
 KCM.SimpleKCM {
     id: root
 
+    property alias cfg_iconNotInstalled: notInstalledIconPicker.currentIcon
+    property alias cfg_isTintNotInstalledEnabled: notInstalledTintPicker.isTinted
+    property alias cfg_colorNotInstalled: notInstalledTintPicker.color
+
     property alias cfg_iconStopped:          stoppedIconPicker.currentIcon
     property alias cfg_isTintStoppedEnabled: stoppedTintPicker.isTinted
     property alias cfg_colorStopped:         stoppedTintPicker.color
@@ -24,6 +28,10 @@ KCM.SimpleKCM {
 
     property alias cfg_visibility:  visibilityComboBox.currentIndex
     property alias cfg_intervalSec: intervalSpinBox.value
+
+    property string cfg_iconNotInstalledDefault
+    property bool   cfg_isTintNotInstalledEnabledDefault
+    property color  cfg_colorNotInstalledDefault
 
     property string cfg_iconStoppedDefault
     property bool   cfg_isTintStoppedEnabledDefault
@@ -118,6 +126,17 @@ KCM.SimpleKCM {
     }
 
     Kirigami.FormLayout {
+        IconPicker {
+            id: notInstalledIconPicker
+            Kirigami.FormData.label: i18n("Not installed:")
+            defaultIcon: root.cfg_iconNotInstalledDefault
+        }
+
+        TintPicker {
+            id: notInstalledTintPicker
+            defaultColor: root.cfg_colorNotInstalledDefault
+        }
+
         IconPicker {
             id: stoppedIconPicker
             Kirigami.FormData.label: i18n("Not running:")

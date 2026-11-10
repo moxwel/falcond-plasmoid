@@ -11,9 +11,10 @@ PlasmoidItem {
 
     readonly property string statusFile: "/tmp/falcond_status"
 
-    readonly property string statusCommand: "sh -c \"systemctl is-active falcond; sed -n 's/^ACTIVE_PROFILE: //p' " + statusFile + "\" 2>/dev/null"
+    readonly property string statusCommand: "sh -c \"systemctl show -p LoadState --value falcond; systemctl is-active falcond; sed -n 's/^ACTIVE_PROFILE: //p' " + statusFile + "\" 2>/dev/null"
 
-    property bool   isFalcondRunning: false
+    property bool   isFalcondInstalled: true // assume installed until we check
+    property bool   isFalcondRunning:   false
     property string activeProfile: ""
 
     readonly property bool isProfileActive: isFalcondRunning && activeProfile !== "" && activeProfile !== "None"
@@ -29,23 +30,27 @@ PlasmoidItem {
     readonly property bool shouldHide: (isHiddenUntilRunning || isHiddenUntilActive) && !isInEditMode
 
     readonly property string iconName: {
-        if (isProfileActive)  return Plasmoid.configuration.iconActive;
-        if (isFalcondRunning) return Plasmoid.configuration.iconRunning;
+        if (!isFalcondInstalled) return Plasmoid.configuration.iconNotInstalled;
+        if (isProfileActive)     return Plasmoid.configuration.iconActive;
+        if (isFalcondRunning)    return Plasmoid.configuration.iconRunning;
         return Plasmoid.configuration.iconStopped;
     }
     readonly property color iconColor: {
-        if (isProfileActive)  return Plasmoid.configuration.colorActive;
-        if (isFalcondRunning) return Plasmoid.configuration.colorRunning;
+        if (!isFalcondInstalled) return Plasmoid.configuration.colorNotInstalled;
+        if (isProfileActive)     return Plasmoid.configuration.colorActive;
+        if (isFalcondRunning)    return Plasmoid.configuration.colorRunning;
         return Plasmoid.configuration.colorStopped;
     }
     readonly property bool isTinted: {
-        if (isProfileActive)  return Plasmoid.configuration.isTintActiveEnabled;
-        if (isFalcondRunning) return Plasmoid.configuration.isTintRunningEnabled;
+        if (!isFalcondInstalled) return Plasmoid.configuration.isTintNotInstalledEnabled;
+        if (isProfileActive)     return Plasmoid.configuration.isTintActiveEnabled;
+        if (isFalcondRunning)    return Plasmoid.configuration.isTintRunningEnabled;
         return Plasmoid.configuration.isTintStoppedEnabled;
     }
     readonly property string statusText: {
-        if (isProfileActive)  return i18n("Game active (%1)", activeProfile);
-        if (isFalcondRunning) return i18n("Running (idle)");
+        if (!isFalcondInstalled) return i18n("Not installed");
+        if (isProfileActive)     return i18n("Game active (%1)", activeProfile);
+        if (isFalcondRunning)    return i18n("Running (idle)");
         return i18n("Not running");
     }
 
@@ -60,8 +65,9 @@ PlasmoidItem {
         interval: Plasmoid.configuration.intervalSec * 1000
         onNewData: (source, data) => {
             const lines = (data.stdout || "").trim().split("\n");
-            root.isFalcondRunning = lines[0] === "active";
-            root.activeProfile    = lines[1] ||  "";
+            root.isFalcondInstalled = lines[0] !== "not-found";
+            root.isFalcondRunning   = lines[1] === "active";
+            root.activeProfile      = lines[2] ||  "";
         }
     }
 

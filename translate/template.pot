@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Falcond Status Checker\n"
 "Report-Msgid-Bugs-To: https://github.com/moxwel/falcond-plasmoid/issues\n"
-"POT-Creation-Date: 2026-11-10 11:23-0300\n"
+"POT-Creation-Date: 2026-11-10 12:26-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,62 +21,70 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:50
+#: contents/ui/configGeneral.qml:62
 msgid "Choose icon"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:69 contents/ui/configGeneral.qml:103
+#: contents/ui/configGeneral.qml:81 contents/ui/configGeneral.qml:116
 msgid "Reset to default"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:91
+#: contents/ui/configGeneral.qml:104
 msgid "Tint the icon"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:116
+#: contents/ui/configGeneral.qml:129
+msgid "Not installed:"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:140
 msgid "Not running:"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:127
+#: contents/ui/configGeneral.qml:151
 msgid "Running (idle):"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:138
+#: contents/ui/configGeneral.qml:162
 msgid "Game active:"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:153
+#: contents/ui/configGeneral.qml:177
 msgid "Show icon:"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:155
+#: contents/ui/configGeneral.qml:179
 msgid "Always"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:156
+#: contents/ui/configGeneral.qml:180
 msgid "While Falcond is running"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:157
+#: contents/ui/configGeneral.qml:181
 msgid "While a game is active"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:167
+#: contents/ui/configGeneral.qml:191
 msgid "Check every:"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:170
+#: contents/ui/configGeneral.qml:194
 msgid "%1 s"
 msgstr ""
 
-#: contents/ui/main.qml:47
+#: contents/ui/main.qml:52
+msgid "Not installed"
+msgstr ""
+
+#: contents/ui/main.qml:53
 msgid "Game active (%1)"
 msgstr ""
 
-#: contents/ui/main.qml:48
+#: contents/ui/main.qml:54
 msgid "Running (idle)"
 msgstr ""
 
-#: contents/ui/main.qml:49
+#: contents/ui/main.qml:55
 msgid "Not running"
 msgstr ""

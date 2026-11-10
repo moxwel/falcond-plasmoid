@@ -4,6 +4,21 @@
     <kcfgfile name=""/>
     <group name="General">
 
+        <entry name="iconNotInstalled" type="String">
+            <label>Icon shown while falcond is not installed</label>
+            <default>input-gamepad-symbolic</default>
+        </entry>
+
+        <entry name="isTintNotInstalledEnabled" type="Bool">
+            <label>Tint the icon while falcond is not installed</label>
+            <default>true</default>
+        </entry>
+
+        <entry name="colorNotInstalled" type="Color">
+            <label>Icon color while falcond is not installed</label>
+            <default>#ff9800</default>
+        </entry>
+
         <entry name="iconStopped" type="String">
             <label>Icon shown while falcond is not running</label>
             <default>input-gamepad-symbolic</default>

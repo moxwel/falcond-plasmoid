@@ -2,10 +2,11 @@
 
 A simple KDE Plasma 6 panel widget that shows whether the [falcond](https://git.pika-os.com/general-packages/falcond) gaming daemon is stopped, running or has a game active.
 
-It polls `systemctl is-active falcond` and the `ACTIVE_PROFILE` line of falcond's status file (`/tmp/falcond_status`), and shows one of three states:
+It polls `systemctl show -p LoadState --value falcond`, `systemctl is-active falcond` and the `ACTIVE_PROFILE` line of falcond's status file (`/tmp/falcond_status`), and shows one of four states:
 
 | State | Icon color |
 |---|---|
+| Falcond not installed | Orange |
 | Service stopped | Gray |
 | Service running, no game detected | White |
 | Service running, game profile active | Green, the tooltip names the profile |

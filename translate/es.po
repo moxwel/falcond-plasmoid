@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Falcond Status Checker\n"
 "Report-Msgid-Bugs-To: https://github.com/moxwel/falcond-plasmoid/issues\n"
-"POT-Creation-Date: 2026-11-10 11:23-0300\n"
+"POT-Creation-Date: 2026-11-10 12:26-0300\n"
 "PO-Revision-Date: 2026-11-10 10:31-0300\n"
 "Last-Translator: moxwel\n"
 "Language-Team: Spanish\n"
@@ -19,62 +19,70 @@ msgstr ""
 msgid "General"
 msgstr "General"
 
-#: contents/ui/configGeneral.qml:50
+#: contents/ui/configGeneral.qml:62
 msgid "Choose icon"
 msgstr "Elegir icono"
 
-#: contents/ui/configGeneral.qml:69 contents/ui/configGeneral.qml:103
+#: contents/ui/configGeneral.qml:81 contents/ui/configGeneral.qml:116
 msgid "Reset to default"
 msgstr "Restablecer el valor predeterminado"
 
-#: contents/ui/configGeneral.qml:91
+#: contents/ui/configGeneral.qml:104
 msgid "Tint the icon"
 msgstr "Teñir el icono"
 
-#: contents/ui/configGeneral.qml:116
+#: contents/ui/configGeneral.qml:129
+msgid "Not installed:"
+msgstr "No está instalado:"
+
+#: contents/ui/configGeneral.qml:140
 msgid "Not running:"
 msgstr "No se está ejecutando:"
 
-#: contents/ui/configGeneral.qml:127
+#: contents/ui/configGeneral.qml:151
 msgid "Running (idle):"
 msgstr "Ejecutándose (idle):"
 
-#: contents/ui/configGeneral.qml:138
+#: contents/ui/configGeneral.qml:162
 msgid "Game active:"
 msgstr "Juego activo:"
 
-#: contents/ui/configGeneral.qml:153
+#: contents/ui/configGeneral.qml:177
 msgid "Show icon:"
 msgstr "Mostrar icono:"
 
-#: contents/ui/configGeneral.qml:155
+#: contents/ui/configGeneral.qml:179
 msgid "Always"
 msgstr "Siempre"
 
-#: contents/ui/configGeneral.qml:156
+#: contents/ui/configGeneral.qml:180
 msgid "While Falcond is running"
 msgstr "Mientras Falcond esté ejecutándose"
 
-#: contents/ui/configGeneral.qml:157
+#: contents/ui/configGeneral.qml:181
 msgid "While a game is active"
 msgstr "Mientras haya juego activo"
 
-#: contents/ui/configGeneral.qml:167
+#: contents/ui/configGeneral.qml:191
 msgid "Check every:"
 msgstr "Comprobar cada:"
 
-#: contents/ui/configGeneral.qml:170
+#: contents/ui/configGeneral.qml:194
 msgid "%1 s"
 msgstr "%1 s"
 
-#: contents/ui/main.qml:47
+#: contents/ui/main.qml:52
+msgid "Not installed"
+msgstr "No está instalado"
+
+#: contents/ui/main.qml:53
 msgid "Game active (%1)"
 msgstr "Juego activo (%1)"
 
-#: contents/ui/main.qml:48
+#: contents/ui/main.qml:54
 msgid "Running (idle)"
 msgstr "Ejecutándose (idle)"
 
-#: contents/ui/main.qml:49
+#: contents/ui/main.qml:55
 msgid "Not running"
 msgstr "No se está ejecutando"
