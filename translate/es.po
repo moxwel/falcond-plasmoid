@@ -1,0 +1,80 @@
+# Spanish translation of the Falcond Status Checker widget.
+# This file is distributed under the same license as the Falcond Status Checker package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Falcond Status Checker\n"
+"Report-Msgid-Bugs-To: https://github.com/moxwel/falcond-plasmoid/issues\n"
+"POT-Creation-Date: 2026-11-10 11:23-0300\n"
+"PO-Revision-Date: 2026-11-10 10:31-0300\n"
+"Last-Translator: moxwel\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: contents/config/config.qml:6
+msgid "General"
+msgstr "General"
+
+#: contents/ui/configGeneral.qml:50
+msgid "Choose icon"
+msgstr "Elegir icono"
+
+#: contents/ui/configGeneral.qml:69 contents/ui/configGeneral.qml:103
+msgid "Reset to default"
+msgstr "Restablecer el valor predeterminado"
+
+#: contents/ui/configGeneral.qml:91
+msgid "Tint the icon"
+msgstr "Teñir el icono"
+
+#: contents/ui/configGeneral.qml:116
+msgid "Not running:"
+msgstr "No se está ejecutando:"
+
+#: contents/ui/configGeneral.qml:127
+msgid "Running (idle):"
+msgstr "Ejecutándose (idle):"
+
+#: contents/ui/configGeneral.qml:138
+msgid "Game active:"
+msgstr "Juego activo:"
+
+#: contents/ui/configGeneral.qml:153
+msgid "Show icon:"
+msgstr "Mostrar icono:"
+
+#: contents/ui/configGeneral.qml:155
+msgid "Always"
+msgstr "Siempre"
+
+#: contents/ui/configGeneral.qml:156
+msgid "While Falcond is running"
+msgstr "Mientras Falcond esté ejecutándose"
+
+#: contents/ui/configGeneral.qml:157
+msgid "While a game is active"
+msgstr "Mientras haya juego activo"
+
+#: contents/ui/configGeneral.qml:167
+msgid "Check every:"
+msgstr "Comprobar cada:"
+
+#: contents/ui/configGeneral.qml:170
+msgid "%1 s"
+msgstr "%1 s"
+
+#: contents/ui/main.qml:47
+msgid "Game active (%1)"
+msgstr "Juego activo (%1)"
+
+#: contents/ui/main.qml:48
+msgid "Running (idle)"
+msgstr "Ejecutándose (idle)"
+
+#: contents/ui/main.qml:49
+msgid "Not running"
+msgstr "No se está ejecutando"
