@@ -1,0 +1,24 @@
+{
+    "KPlugin": {
+        "Id": "cl.moxwel.falcondstatus",
+        "Name": "Falcond Status Checker",
+        "Description": "Shows the status of the Falcond daemon",
+        "Description[es]": "Muestra el estado del daemon Falcond",
+        "Icon": "input-gamepad-symbolic",
+        "Category": "System Information",
+        "License": "GPL-3.0-or-later",
+        "Version": "1.0.0",
+        "Authors": [
+            {
+                "Name": "moxwel",
+                "Email": "moxwelderg@gmail.com"
+            }
+        ],
+        "Website": "https://github.com/moxwel/falcond-plasmoid",
+        "BugReportUrl": "https://github.com/moxwel/falcond-plasmoid/issues"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-NotificationArea": "true",
+    "X-Plasma-NotificationAreaCategory": "SystemServices",
+    "KPackageStructure": "Plasma/Applet"
+}

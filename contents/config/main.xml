@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name=""/>
+    <group name="General">
+
+        <entry name="iconStopped" type="String">
+            <label>Icon shown while falcond is not running</label>
+            <default>input-gamepad-symbolic</default>
+        </entry>
+
+        <entry name="isTintStoppedEnabled" type="Bool">
+            <label>Tint the icon while falcond is not running</label>
+            <default>true</default>
+        </entry>
+
+        <entry name="colorStopped" type="Color">
+            <label>Icon color while falcond is not running</label>
+            <default>#808080</default>
+        </entry>
+
+        <entry name="iconRunning" type="String">
+            <label>Icon shown while falcond is running with no game profile active</label>
+            <default>input-gamepad-symbolic</default>
+        </entry>
+
+        <entry name="isTintRunningEnabled" type="Bool">
+            <label>Tint the icon while falcond is running with no game profile active</label>
+            <default>true</default>
+        </entry>
+
+        <entry name="colorRunning" type="Color">
+            <label>Icon color while falcond is running with no game profile active</label>
+            <default>#ffffff</default>
+        </entry>
+
+        <entry name="iconActive" type="String">
+            <label>Icon shown while a game profile is active</label>
+            <default>input-gamepad-symbolic</default>
+        </entry>
+
+        <entry name="isTintActiveEnabled" type="Bool">
+            <label>Tint the icon while a game profile is active</label>
+            <default>true</default>
+        </entry>
+
+        <entry name="colorActive" type="Color">
+            <label>Icon color while a game profile is active</label>
+            <default>#4ade80</default>
+        </entry>
+
+        <entry name="visibility" type="Int">
+            <label>When to show the icon: 0 always, 1 while falcond is running, 2 while a game profile is active</label>
+            <default>0</default>
+            <min>0</min>
+            <max>2</max>
+        </entry>
+
+        <entry name="intervalSec" type="Int">
+            <label>Seconds between status checks</label>
+            <default>5</default>
+            <min>1</min>
+            <max>60</max>
+        </entry>
+
+    </group>
+</kcfg>
