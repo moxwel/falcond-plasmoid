@@ -4,7 +4,7 @@
         "Name": "Falcond Status Checker",
         "Description": "Shows the status of the Falcond daemon",
         "Description[es]": "Muestra el estado del daemon Falcond",
-        "Icon": "input-gamepad-symbolic",
+        "Icon": "input-gamepad",
         "Category": "System Information",
         "License": "GPL-3.0-or-later",
         "Version": "1.0.0",
