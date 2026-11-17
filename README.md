@@ -13,6 +13,16 @@ It polls `systemctl show -p LoadState --value falcond`, `systemctl is-active fal
 
 > This is a learning project to help me learn more about KDE Plasma development, so I welcome any feedback or suggestions.
 
+## Screenshots
+
+### Usage
+
+![Usage](./docs/usage1.png)
+
+### Settings
+
+![Settings](./docs/config1.png)
+
 ## Install
 
 ### GitHub Releases
